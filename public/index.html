@@ -1,41 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon"
+          href="%PUBLIC_URL%/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72"
+          href="%PUBLIC_URL%/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+          href="%PUBLIC_URL%/favicons/apple-icon-114x114.png">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--TODO: Replace meta desc-->
+    <meta name="description"
+          content="Shapemore Business - One stop solution to grow business by managing salon or spa through an app. Owner can focus on customers and staff to provide better service and attract new customers.">
+    <!--TODO: Replace meta Author-->
+    <meta name="author" content="Ansonika">
+    <!--TODO: Replace meta theme color-->
+    <meta name="theme-color" content="#000000">
     <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-  </body>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
+    <link href="%PUBLIC_URL%/css/bootstrap.min.css" rel="stylesheet">
+    <link href="%PUBLIC_URL%/css/vendors.css" rel="stylesheet">
+    <link href="%PUBLIC_URL%/css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+
+    <!-- SPECIFIC CSS -->
+    <!--<link href="%PUBLIC_URL%/layerslider/css/layerslider.css" rel="stylesheet">-->
+
+    <!-- Revolusion Slider -->
+    <!--<link rel="stylesheet" type="text/css" href="./rs-plugin/css/settings.css" media="screen" />-->
+
+    <!-- YOUR CUSTOM CSS -->
+    <!--<link href="%PUBLIC_URL%/css/custom.css" rel="stylesheet">-->
+
+
+
+
+
+    <title>Shapemore Online Appointment Booking - Salon & Spa Software</title>
+</head>
+<body>
+<noscript>
+    You need to enable JavaScript to run this app.
+</noscript>
+
+<div id="root"></div>
+
+<!-- page -->
+
+
+<!-- COMMON SCRIPTS -->
+<script src="%PUBLIC_URL%/js/jquery-2.2.4.min.js"></script>
+<script src="%PUBLIC_URL%/js/common_scripts.js"></script>
+<script src="%PUBLIC_URL%/js/main.js"></script>
+<!--<script src="%PUBLIC_URL%/assets/validate.js"></script>-->
+
+<!-- SPECIFIC SCRIPTS -->
+<script src="%PUBLIC_URL%/layerslider/js/greensock.js"></script>
+<!--<script src="%PUBLIC_URL%/layerslider/js/layerslider.transitions.js"></script>-->
+<!--<script src="%PUBLIC_URL%/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>-->
+
+<!-- Revolusion Slider  -->
+<!--<script src="./rs-plugin/js/jquery.themepunch.revolution.js"></script>-->
+<!--<script src="./rs-plugin/js/jquery.themepunch.plugins.min.js"></script>-->
+
+</body>
 </html>
