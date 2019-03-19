@@ -2,12 +2,10 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import ReactWOW from 'react-wow'
 import logo_sticky from '../../img/logo_sticky.png'
-import login_img from '../../img/oneplus.png'
 import google_plus_icon from '../../img/google-icon.png'
 import $ from 'jquery'
 import './login.scss'
 import LoginInput from "../common/LoginInput";
-import axios from "axios";
 
 class Login extends Component {
 
@@ -26,6 +24,12 @@ class Login extends Component {
 
     componentDidMount() {
         document.body.style.background = '#fbfbfb';
+        document.body.style.display = 'flex';
+        document.body.style.justifyContent = 'center';
+        document.body.style.alignItems = 'center';
+        document.body.style.flexDirection = 'column';
+        document.body.style.height = '100vh';
+        document.body.style.overflow = 'hidden';
 
         /*$("#signup").click(function () {
             $(".message").css("transform", "translateX(100%)");
@@ -239,7 +243,7 @@ class Login extends Component {
                             <div className="form form--signup">
                                 <img src={logo_sticky}/>
                                 <p>&nbsp;</p>
-                                <form autoComplete="off" noValidate={true} onSubmit={this.onSubmit}>
+                                <form className={'auth-form'} autoComplete="off" noValidate={true} onSubmit={this.onSubmit}>
 
                                     <div className="text-center mb-4">
                                         <Link to="#0" className="social-fb-button">
@@ -330,7 +334,7 @@ class Login extends Component {
 
                                 <img src={logo_sticky}/>
                                 <p>&nbsp;</p>
-                                <form autoComplete="off" noValidate={true} onSubmit={this.onLoginSubmit}>
+                                <form className={'auth-form'} autoComplete="off" noValidate={true} onSubmit={this.onLoginSubmit}>
 
                                     <div className="text-center mb-4">
                                         <Link to="#0" className="social-fb-button">
@@ -410,7 +414,7 @@ class Login extends Component {
                                     <Link to="index.html"><img src={logo_sticky} width={200} data-retina="true"
                                                                alt className="logo_sticky"/></Link>
                                 </figure>
-                                <form autoComplete="off" noValidate={true} onSubmit={this.onLoginSubmit}>
+                                <form className={'auth-form'} autoComplete="off" noValidate={true} onSubmit={this.onLoginSubmit}>
                                     <div className="row text-center">
                                         <Link to="#0" className="social-btn btn_1 fb-color rounded float-left">
                                             <i className="icon-facebook"/> Facebook
@@ -493,7 +497,7 @@ class Login extends Component {
                                     <Link to="index.html"><img src={logo_sticky} width={200} data-retina="true"
                                                                alt className="logo_sticky"/></Link>
                                 </figure>
-                                <form autoComplete="off" noValidate={true} onSubmit={this.onSubmit}>
+                                <form className={'auth-form'} autoComplete="off" noValidate={true} onSubmit={this.onSubmit}>
                                     <div className="row text-center">
                                         <Link to="#0" className="social-btn btn_1 fb-color rounded float-left">
                                             <i className="icon-facebook"/> Facebook

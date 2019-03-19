@@ -25,7 +25,7 @@ const LoginInput = ({
                 required
             />
             <label htmlFor={id}> {placeholder} </label>
-            <i className={icon}/>
+            <i id="input-icon" className={icon}/>
             <line/>
             <br/>
             {error && <div className="invalid-feedback">{error}</div>}

@@ -8,18 +8,11 @@ $brand-color: #17A598;
 $purple: #17A598;
 $grey: #C3C3D8;
 
-body, .message, .form, form {
+.message, .form, .auth-form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-body {
-  height: 100vh;
-  background: #E8E8E8;
-  font-family: $font;
-  overflow: hidden;
 }
 
 .auth-container {
@@ -96,7 +89,8 @@ body {
 
 .animate-label {
   position: relative;
-  margin-top: 20px;
+  //margin-top: 20px;
+  margin: 20px 0px;
   @include mobile {
     margin-top: 30px;
     margin-bottom: 10px;
@@ -145,14 +139,14 @@ body {
   }
 }
 
-form {
+form.auth-form {
   width: 90%;
   @include mobile {
     width: 100%;
     padding: 10px;
   }
   > * {
-    margin: 10px;
+    //margin: 10px 0px;
   }
   input {
     width: 100%;
@@ -167,7 +161,7 @@ form {
   }
   .divider {
     width: 100%;
-    margin: 0px 0 10px 0;
+    margin: 10px 0 10px 0;
     span {
       background-color: #ffffff;
       @include mobile {
@@ -244,8 +238,9 @@ form {
   position: absolute;
   color: #ea4335;
 }
+
 .is-invalid {
-  border-bottom: 1px solid #ea4335;
+  border-bottom: 1px solid #ea4335 !important;
 }
 
 .social-btn:hover {
@@ -256,15 +251,15 @@ form {
   color: #3b5998 !important;
 }
 
-.desktop-remember-me{
+.desktop-remember-me {
   width: 100%;
 }
 
-#mobile_signup, #mobile_singin{
+#mobile_signup, #mobile_singin {
   color: $color-1;
 }
 
-.make-like-link{
+.make-like-link {
   color: $color-1;
   cursor: pointer;
   font-weight: 600;
@@ -276,7 +271,7 @@ form {
 
 .form-group {
   @include mobile {
-    i {
+    #input-icon {
       left: 0px !important;
       top: -2px !important;
     }
