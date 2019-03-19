@@ -1,0 +1,56 @@
+/*============================================================================================*/
+/* Your custom styles below */
+/*============================================================================================*/
+.feature-read-more {
+    color: #32a067;
+    text-align: right;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.sticky > #menu > ul > li span a.btn-request {
+    border: none;
+    color: #fff;
+    background: #fc5b62;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+
+    /*creating round*/
+    -webkit-border-radius: 25px !important;
+    -moz-border-radius: 25px !important;
+    -ms-border-radius: 25px !important;
+    border-radius: 25px !important;
+}
+
+a.box_topic i {
+    padding: 6px;
+    font-size: 55px;
+}
+
+.m-img {
+    width: 75%;
+}
+#logo {
+    margin-top: 5px;
+}
+/*.newLine {*/
+/*margin: 10px 0 10px 0;*/
+/*}*/

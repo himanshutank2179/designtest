@@ -1,0 +1,393 @@
+@import '../../sass/variables';
+@import '../../sass/mixin';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+$font: Poppins, Helvetica, sans-serif;
+$brand-color: #17A598;
+$purple: #17A598;
+$grey: #C3C3D8;
+
+body, .message, .form, form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  height: 100vh;
+  background: #E8E8E8;
+  font-family: $font;
+  overflow: hidden;
+}
+
+.auth-container {
+  width: 900px;
+  @include tablet {
+    width: 700px;
+  }
+  @include mobile {
+    width: 100%;
+
+  }
+  height: 550px;
+  background: #ffffff;
+  position: relative;
+  display: grid;
+  grid-template: 100% / 50% 50%;
+  box-shadow: 2px 2px 10px 0 rgba(#333, 0.2);
+}
+
+.message {
+  position: absolute;
+  background: #ffffff;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s all ease;
+  transform: translateX(100%);
+  z-index: 4;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 70%;
+    background: $grey;
+    opacity: 0;
+    left: 0;
+    top: 15%;
+  }
+
+  .button {
+    margin: 5px 0;
+  }
+}
+
+.signup {
+  &:before {
+    opacity: 0.3;
+    left: 0;
+  }
+}
+
+.login {
+  &:before {
+    opacity: 0.3;
+    left: 100%;
+  }
+}
+
+.btn-wrapper {
+  width: 60%;
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+
+  &--heading {
+    font-size: 18px;
+    height: 50px;
+    color: $brand-color;
+    font-family: $font;
+  }
+}
+
+.animate-label {
+  position: relative;
+  margin-top: 20px;
+  @include mobile {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  width: 100%;
+  i {
+    font-size: 21px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ccc;
+    width: 25px;
+    height: 25px;
+    display: block;
+    font-weight: 400 !important;
+  }
+  label {
+    position: absolute;
+    bottom: 6px;
+    left: 30px;
+    transition: .3s all ease;
+    font-size: 14px;
+    width: 100%;
+    color: #888888;
+  }
+  input:valid + label, input:focus + label {
+    bottom: 30px;
+    font-size: 10px;
+  }
+  input:focus + label {
+    color: $brand-color;
+  }
+  line:before {
+    content: '';
+    position: absolute;
+    background: $brand-color;
+    width: 0px;
+    height: 2px;
+    right: 50%;
+    bottom: 0;
+  }
+  input:focus ~ line:before {
+    width: 100%;
+    right: 0;
+    transition: all .3s ease;
+  }
+}
+
+form {
+  width: 90%;
+  @include mobile {
+    width: 100%;
+    padding: 10px;
+  }
+  > * {
+    margin: 10px;
+  }
+  input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+    background: transparent;
+    padding-left: 30px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .divider {
+    width: 100%;
+    margin: 0px 0 10px 0;
+    span {
+      background-color: #ffffff;
+      @include mobile {
+        background-color: #ffffff;
+      }
+    }
+  }
+  .access_social {
+    margin-top: 4.5em;
+  }
+  /*input {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid rgba(195, 195, 216, 0.5);
+    font-size: 13px;
+    font-weight: 300;
+    color: #17A598;
+    letter-spacing: 0.11em;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: #ffffff;
+
+    &::placeholder {
+      color: #C3C3D8;
+      font-size: 10px;
+    }
+
+    &:focus {
+      outline: 0;
+      border-bottom: 1px solid rgba($brand-color, 0.7);
+      transition: 0.6s all ease;
+    }
+  }*/
+}
+
+#login aside, #register aside {
+  @include mobile {
+    width: 100%;
+    padding: 30px 0px;
+  }
+}
+
+.social-btn {
+  background: #fbfbfb !important;
+  margin: 0px auto;
+  margin-bottom: 10px !important;
+  padding: 15px 25px !important;
+  .icon-facebook, .icon-googleplus {
+    color: #3b5998;
+    font-size: 20px;
+  }
+}
+
+.social-fb-button {
+  background: #fbfbfb;
+  margin: 0px 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #3b5998;
+  font-weight: 600;
+}
+
+.social-gplus-button {
+  background: #fbfbfb;
+  margin: 0px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #ea4335;
+  font-weight: 600;
+}
+
+.invalid-feedback {
+  font-size: 12px;
+  position: absolute;
+  color: #ea4335;
+}
+.is-invalid {
+  border-bottom: 1px solid #ea4335;
+}
+
+.social-btn:hover {
+  box-shadow: 2px 1px 1px #c6c6c6 !important;
+}
+
+.fb-color {
+  color: #3b5998 !important;
+}
+
+.desktop-remember-me{
+  width: 100%;
+}
+
+#mobile_signup, #mobile_singin{
+  color: $color-1;
+}
+
+.make-like-link{
+  color: $color-1;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.google-color {
+  color: #ea4335 !important;
+}
+
+.form-group {
+  @include mobile {
+    i {
+      left: 0px !important;
+      top: -2px !important;
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  height: 35px;
+  border: 0;
+  outline: 0;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  position: relative;
+  z-index: 3;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, $brand-color, $purple);
+  font-family: $font;
+  border-radius: 20px;
+}
+
+@media (max-width: 750px) {
+  .auth-container {
+    transform: scale(0.8);
+  }
+}
+
+/* Social button css */
+.icon {
+  position: relative;
+  text-align: center;
+  width: 0px;
+  height: 0px;
+  padding: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -moz-border-radius: 20px 20px 20px 20px;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  -khtml-border-radius: 20px 20px 20px 20px;
+  color: #FFFFFF;
+}
+
+.icon i {
+  font-size: 20px;
+  position: absolute;
+  left: 9px;
+  top: 10px;
+}
+
+.icon.social {
+  float: left;
+  margin: -50px 0px 0 0;
+  cursor: pointer;
+  background: #ffffff;
+  color: #262626;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  border: 1px solid #c4c4c4;
+}
+
+.icon.social.fb {
+  left: -10px;
+  bottom: 1em;
+}
+
+.icon.social.gplus {
+  left: 60%;
+  bottom: 1em;
+}
+
+#mobile_signIn {
+  span {
+    color: $brand-color;
+    cursor: pointer;
+  }
+}
+
+#mobile-login {
+  display: none;
+}
+
+.small-device-design {
+  /*figure {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 20px;
+    z-index: 999;
+    background: #fbfbfb;
+  }*/
+}
+
+/*
+.forgot_password {
+  width: 100%;
+}
+
+.new-reg-container {
+  width: 100%;
+  text-align: center;
+  span {
+    color: $brand-color;
+  }
+}
+#mobile-register {
+  margin-top: 10em !important;
+}*/
